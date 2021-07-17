@@ -45,7 +45,7 @@
  *
  ******************************************************************************/
 
-package edu.algs4;
+package edu.algs4.standard;
 
 import java.util.Random;
 

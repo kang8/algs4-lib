@@ -1,4 +1,4 @@
-package edu.algs4;
+package edu.algs4.standard;
 
 /******************************************************************************
  *  Compilation:  javac StdOut.java
