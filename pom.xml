@@ -4,13 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>edu.algs4</groupId>
+    <groupId>com.github.kang8</groupId>
     <artifactId>algs4-lib</artifactId>
-    <version>1.0</version>
+    <version>1.0-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
@@ -25,10 +26,15 @@
     </dependencies>
 
     <distributionManagement>
+        <snapshotRepository>
+          <id>ossrh</id>
+          <name>Central Repository OSSRH</name>
+          <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
         <repository>
-            <id>github</id>
-            <name>Algorithms Fourth Edition library Maven Packages</name>
-            <url>https://maven.pkg.github.com/kang8/algs4-lib</url>
+          <id>ossrh</id>
+          <name>Central Repository OSSRH</name>
+          <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
 

@@ -45,7 +45,7 @@
  *
  ******************************************************************************/
 
-package edu.algs4.standard;
+package com.github.kang8.standard;
 
 import java.util.Random;
 
