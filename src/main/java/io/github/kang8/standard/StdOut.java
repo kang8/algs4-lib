@@ -1,4 +1,4 @@
-package com.github.kang8.standard;
+package io.github.kang8.standard;
 
 /******************************************************************************
  *  Compilation:  javac StdOut.java

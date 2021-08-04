@@ -1,3 +1,5 @@
+package io.github.kang8.standard;
+
 /******************************************************************************
  *  Compilation:  javac StdRandom.java
  *  Execution:    java StdRandom
@@ -44,8 +46,6 @@
  *      strength random number generator in Java.
  *
  ******************************************************************************/
-
-package com.github.kang8.standard;
 
 import java.util.Random;
 
