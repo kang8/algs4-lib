@@ -51,7 +51,7 @@ import java.util.Locale;
  * <li> {@code StdOut} <em>flushes</em> standard output after each call to
  *      {@code print()} so that text will appear immediately in the terminal.
  * </ul>
- * p>
+ * <p>
  * <b>Reference.</b>
  * For additional documentation,
  * see <a href="https://introcs.cs.princeton.edu/15inout">Section 1.5</a> of
