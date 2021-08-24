@@ -1,6 +1,26 @@
 name: Deploy SNAPSHOT
+
 on: [push]
+
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2.2.0
+      - name: Set up ossrh
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+          distribution: 'adopt'
+      - name: Cache m2 package
+        uses: actions/cache@v2
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+      - run: mvn test
+
   deploy-snapshot:
     runs-on: ubuntu-latest
     steps:
@@ -20,8 +40,7 @@ jobs:
           key: ${{ runner.os }}-maven-${{ hashFiles('pom.xml') }}
           restore-keys: |
             ${{ runner.os }}-maven-
-      - name: Deploy snapshot
-        run: mvn -B deploy -P snapshot
-        env:
-          MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
-          MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
+      - name: python script
+        run: |
+          print("Hello")
+        shell: python
