@@ -42,4 +42,13 @@ jobs:
             ${{ runner.os }}-maven-
       - name: python script
         run: |
-          python -V
+          import xml.etree.ElementTree as ET
+          xml_file = 'pom.xml'
+          tree = ET.parse(xml_file)
+          version = tree.find("{http://maven.apache.org/POM/4.0.0}version")
+          print(version.text + "-SNAPSHOT")
+          tree.find("{http://maven.apache.org/POM/4.0.0}version").text = 'Good'
+          ET.register_namespace("", "http://maven.apache.org/POM/4.0.0")
+          tree.write(xml_file, "utf-8", True)
+        shell: python
+      - run: cat pom.xml
